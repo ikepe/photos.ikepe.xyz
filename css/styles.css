@@ -1,0 +1,95 @@
+body {
+  font-family: "M PLUS 1p";
+}
+
+footer {
+  margin: 0 auto;
+  height: 60px;
+  line-height: 60px;
+  position: absolute;
+  /*←絶対位置*/
+  bottom: 0;
+  /*下に固定*/
+}
+
+/*URLの下線を消し、黒字にする*/
+.URL {
+  text-decoration: none;
+  color: black;
+}
+
+.link {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.mxgraph{
+  width: 100%;
+}
+
+/* profile.html */
+.prof-block{
+  font-family: "M PLUS 1p";
+}
+.prof-title{
+  color: #2d2d2d;
+}
+
+/***PC***/
+@media screen and (min-width:901px) {
+  /*プロフ用*/
+  .prof-block {
+    margin-left: 5%;
+  }
+  .prof-title {
+    margin-top: 30px;
+  }
+  .prof-text {
+    margin-left: 20px;
+    border-left: thick solid #585858;
+    padding-left: 20px;
+  }
+
+  /* devices */
+  .device-title {
+    margin-top: 30px;
+  }
+  /* .device-block{
+    margin-left: 5%;
+  }
+  .device-list {
+    margin-left: 20px;
+    border-left: thick solid #585858;
+    padding-left: 20px;
+  } */
+}
+
+/***mobile***/
+@media screen and (max-width:900px) {
+  h1 {
+    font-size: large;
+  }
+  
+  /*プロフ用*/
+  .prof-block {
+    margin: 0 auto;
+  }
+  .prof-title {
+    margin-top: 30px;
+    margin-bottom: -10px;
+    margin-left: 35%;
+    text-align: left;
+  }
+  .prof-text {
+    padding-left: 20px;
+    margin:auto;
+  }
+
+  /* device */
+  .device-title {
+    margin-top: 30px;
+    margin-bottom: -10px;
+    margin-left: 30%;
+    text-align: auto;
+  }
+}
