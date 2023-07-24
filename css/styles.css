@@ -12,6 +12,19 @@ footer {
   /*下に固定*/
 }
 
+/***img***/
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+img { /*画像サイズはPCとmobileで変える*/
+  flex-grow: 1;
+  object-fit: cover;
+  margin: 0.3rem;
+  border-radius: 5px;
+}
+
 /*URLの下線を消し、黒字にする*/
 .URL {
   text-decoration: none;
@@ -23,20 +36,24 @@ footer {
   grid-template-columns: 1fr 1fr;
 }
 
-.mxgraph{
+.mxgraph {
   width: 100%;
 }
 
 /* profile.html */
-.prof-block{
+.prof-block {
   font-family: "M PLUS 1p";
 }
-.prof-title{
+.prof-title {
   color: #2d2d2d;
 }
 
 /***PC***/
-@media screen and (min-width:901px) {
+@media screen and (min-width: 901px) {
+  img {
+    height: 250px;
+    max-width: 400px;
+  }
   /*プロフ用*/
   .prof-block {
     margin-left: 5%;
@@ -65,11 +82,16 @@ footer {
 }
 
 /***mobile***/
-@media screen and (max-width:900px) {
+@media screen and (max-width: 900px) {
   h1 {
     font-size: large;
   }
-  
+
+  img {
+    height: 150px;
+    max-width: 400px;
+  }
+
   /*プロフ用*/
   .prof-block {
     margin: 0 auto;
@@ -82,7 +104,7 @@ footer {
   }
   .prof-text {
     padding-left: 20px;
-    margin:auto;
+    margin: auto;
   }
 
   /* device */
